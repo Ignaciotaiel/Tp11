@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+
+void matriz(int filas, int columnas,  string l,  string o) {
+    vector<vector<string>> matriz(filas, vector<string>(columnas));
+    for (int i = 0; i < filas; ++i) {
+        for (int j = 0; j < columnas; ++j) {
+            if (i % 2 == 0) {
+                matriz[i][j] = l;
+            } else {
+                matriz[i][j] = o;
+            }
+            cout << matriz[i][j];
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int filas, columnas;
+    string l = "L";
+    string o = "O";
+    
+    cin >> filas >> columnas;
+    
+    matriz(filas, columnas, l, o);
+    
+    return 0;
+}	
